@@ -1,4 +1,3 @@
-import {lookupArchive} from "@subsquid/archive-registry"
 import * as ss58 from "@subsquid/ss58"
 import {BatchContext, BatchProcessorItem, SubstrateBatchProcessor} from "@subsquid/substrate-processor"
 import {Store, TypeormDatabase} from "@subsquid/typeorm-store"
@@ -11,7 +10,7 @@ const processor = new SubstrateBatchProcessor()
     .setBatchSize(500)
     .setDataSource({
         // Lookup archive by the network name in the Subsquid registry
-        archive: lookupArchive("kusama", {release: "FireSquid"})
+        archive: 'http://kusama-test.archive.subsquid.io/graphql',
 
         // Use archive created by archive/docker-compose.yml
         // archive: 'http://localhost:8888/graphql'
