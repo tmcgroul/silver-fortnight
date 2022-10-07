@@ -10,7 +10,7 @@ const processor = new SubstrateBatchProcessor()
     .setBatchSize(500)
     .setDataSource({
         // Lookup archive by the network name in the Subsquid registry
-        archive: 'http://kusama-test.archive.subsquid.io/graphql',
+        archive: 'https://kusama-test.archive.subsquid.io/graphql',
 
         // Use archive created by archive/docker-compose.yml
         // archive: 'http://localhost:8888/graphql'
